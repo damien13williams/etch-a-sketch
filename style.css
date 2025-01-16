@@ -1,0 +1,90 @@
+/* Container for the entire layout */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* Full viewport height */
+}
+
+/* UI container, keeping the inputs at the top */
+#grid-generator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 10;
+}
+
+/* Title for the grid generator */
+#grid-generator-container h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the input fields */
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 5px;
+    font-size: 16px;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    width: 80px;
+    box-sizing: border-box;
+}
+
+/* Styling for the generate button */
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the generate button */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the error message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
+}
+/* Container that holds the grid items */
+#grid-container {
+    display: flex;               /* Enable Flexbox */
+    flex-wrap: wrap;
+    width: 400px;                /* Fixed width for the container */
+    height: 400px;               /* Fixed height for the container */
+    margin: 20px auto;/* Center the grid */
+    
+    align-content: flex-start;
+    border: 1px solid #000;      /* Border for the container */
+}
+
+/* Styling for each grid item */
+.grid-item {
+    
+    background-color: #ddd;      /* Light grey background for grid items */
+    border: 1px solid #bbb;      /* Border for grid items */
+    width: 25px;                 /* Set width of each square */
+    height: 25px;                /* Set height of each square */
+    display: flex;               /* Use flex to center the content */
+    justify-content: center;     /* Center content horizontally */
+    align-items: center;         /* Center content vertically */
+    box-sizing: border-box;  
+}
+
+/* Hovered class for JavaScript */
+.grid-item.hovered {
+    background-color: red; /* Hover effect color */
+}
+
